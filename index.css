@@ -1,0 +1,269 @@
+/*=================COMMON*/
+body {
+	background: #dccf91;
+	margin: 0;
+}
+
+/*=================HEADER*/
+.header {
+	height: 300px;
+	margin-bottom: 65px;
+	background-image: url("https://kidpassage.com/images/publications/images/fruktyi-ovoschi-rossii-photo2(1).jpg");
+	background-repeat: no-repeat;
+	/*background-position: center center;*/
+	background-size: cover;
+	background-color: #000000;
+	position: relative;
+	z-index: 0;
+	padding: 30px 0;
+}
+
+.header:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000;
+	opacity: 0.6;
+	z-index: -1;
+}
+
+h1 {
+	position: absolute;
+	right: 10%;
+	bottom: 15%;
+	font-family: "Merriweather", sans-serif;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: right;
+	color: #edeff3;
+}
+
+.header-title {
+	position: absolute;
+	left: 3%;
+	top: 0;
+	display: inline-block;
+	color: #edeff3;
+	font-size: 20px;
+	font-weight: bold;
+	width: 30%;
+}
+
+.red {
+	color: #b21a1a;
+	font-size: 120%;
+}
+
+/*=================PIC*/
+
+main {
+	width: 85%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+div[class*="pic"] label {
+	height: 75px;
+	width: 75px;
+	position: absolute;
+	right: 9%;
+	top: 11%;
+	cursor: pointer;
+	z-index: 5;
+}
+
+div[class*="pic"] label:hover {
+	opacity: 0.5;
+}
+
+div[class*="pic"] label img {
+	position: relative;
+	z-index: -5;
+}
+
+input[id="pic_1"]:checked ~ div[class="pic_1"],
+input[id="pic_2"]:checked ~ div[class="pic_2"],
+input[id="pic_3"]:checked ~ div[class="pic_3"],
+input[id="pic_4"]:checked ~ div[class="pic_4"],
+input[id="pic_5"]:checked ~ div[class="pic_5"],
+input[id="pic_6"]:checked ~ div[class="pic_6"],
+input[id="pic_7"]:checked ~ div[class="pic_7"],
+input[id="pic_8"]:checked ~ div[class="pic_8"],
+input[id="pic_9"]:checked ~ div[class="pic_9"],
+input[id="pic_10"]:checked ~ div[class="pic_10"],
+input[id="pic_11"]:checked ~ div[class="pic_11"],
+input[id="pic_12"]:checked ~ div[class="pic_12"],
+input[id="pic_13"]:checked ~ div[class="pic_13"],
+input[id="pic_14"]:checked ~ div[class="pic_14"],
+input[id="pic_15"]:checked ~ div[class="pic_15"],
+input[id="pic_16"]:checked ~ div[class="pic_16"],
+input[id="pic_17"]:checked ~ div[class="pic_17"],
+input[id="pic_18"]:checked ~ div[class="pic_18"],
+input[id="pic_19"]:checked ~ div[class="pic_19"],
+input[id="pic_20"]:checked ~ div[class="pic_20"] {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: block;
+	background: rgba(70, 69, 58, 0.8);
+	z-index: 100;
+}
+
+input[id*="pic"]:checked ~ div[class*="pic"] img {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+div[class*="pic"],
+input[id*="pic"] {
+	display: none;
+}
+
+/*=================BLOCK*/
+
+input[value="block-1"]:checked ~ div[class="block-1"],
+input[value="block-2"]:checked ~ div[class="block-2"],
+input[value="block-3"]:checked ~ div[class="block-3"],
+input[value="block-4"]:checked ~ div[class="block-4"],
+input[value="block-5"]:checked ~ div[class="block-5"] {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+div[class*="block"],
+input[id*="block"] {
+	display: none;
+}
+
+input[value="block-1"]:checked ~ label[for="block-2"],
+input[value="block-1"]:checked ~ label[for="block-5"],
+input[value="block-2"]:checked ~ label[for="block-3"],
+input[value="block-3"]:checked ~ label[for="block-4"],
+input[value="block-4"]:checked ~ label[for="block-5"] {
+	position: absolute;
+	right: 0;
+	bottom: 25%;
+	display: inline-block;
+	border: 30px solid transparent;
+	border-left: 35px solid #9f9f9f;
+	width: 0;
+	height: 0;
+	cursor: pointer;
+}
+
+input[value="block-2"]:checked ~ label[for="block-1"],
+input[value="block-3"]:checked ~ label[for="block-2"],
+input[value="block-4"]:checked ~ label[for="block-3"],
+input[value="block-5"]:checked ~ label[for="block-4"],
+input[value="block-5"]:checked ~ label[for="block-1"] {
+	position: absolute;
+	left: 0;
+	bottom: 25%;
+	display: inline-block;
+	border: 30px solid transparent;
+	border-right: 35px solid #9f9f9f;
+	width: 0;
+	height: 0;
+	cursor: pointer;
+}
+
+input[value="block-2"]:checked ~ label[for="block-1"]:hover,
+input[value="block-3"]:checked ~ label[for="block-2"]:hover,
+input[value="block-4"]:checked ~ label[for="block-3"]:hover,
+input[value="block-5"]:checked ~ label[for="block-4"]:hover,
+input[value="block-5"]:checked ~ label[for="block-1"]:hover {
+	border-right: 35px solid #499327;
+}
+
+input[value="block-1"]:checked ~ label[for="block-2"]:hover,
+input[value="block-1"]:checked ~ label[for="block-5"]:hover,
+input[value="block-2"]:checked ~ label[for="block-3"]:hover,
+input[value="block-3"]:checked ~ label[for="block-4"]:hover,
+input[value="block-4"]:checked ~ label[for="block-5"]:hover {
+	border-left: 35px solid #499327;
+}
+
+input[value="block-1"]:checked ~ label[for="block-2"] {
+	z-index: 2;
+}
+
+input[value="block-1"]:checked ~ label[for="block-5"],
+input[value="block-2"]:checked ~ label[for="block-3"],
+input[value="block-3"]:checked ~ label[for="block-4"],
+input[value="block-4"]:checked ~ label[for="block-5"] {
+	z-index: 1;
+}
+
+/*=================CONTENT*/
+
+div[class*="block"] .content:nth-child(1) {
+	float: left;
+	left: -2%;
+}
+
+div[class*="block"] .content:not(:nth-child(1)) {
+	float: left;
+}
+
+div[class*="block"] .content:nth-child(2) {
+	left: 24%;
+}
+
+div[class*="block"] .content:nth-child(3) {
+	left: 50%;
+}
+div[class*="block"] .content:nth-child(4) {
+	left: 76%;
+}
+
+.content {
+	text-align: center;
+	width: 280px;
+	display: inline-block;
+	position: absolute;
+	z-index: 0;
+}
+
+.content:hover {
+	position: absolute;
+
+	padding: 10px;
+	width: 340px;
+	background: white;
+	box-shadow: 3px 3px 25px -3px rgba(0, 0, 0, 0.75);
+	z-index: 2;
+}
+
+.content img {
+	width: 270px;
+	height: 270px;
+	cursor: pointer;
+}
+
+.content p {
+	display: none;
+}
+
+.content:hover p {
+	font-family: "Merriweather", sans-serif;
+	font-size: 10px;
+	width: 340px;
+	text-align: left;
+	display: inline-block;
+}
+
+.content:hover img {
+	width: 330px;
+}
